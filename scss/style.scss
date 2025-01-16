@@ -1,0 +1,71 @@
+@use "./cssreset.scss";
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 50vh;
+    width: 50vw;
+}
+
+////////////////////////////////////////////////////////////////////////
+
+.loading_bar {
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    width: calc(100% - 20px);
+    padding: 2px;
+    height: 18px;
+
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+
+    background: rgb(164,166,164);
+    background: -moz-linear-gradient(0deg, rgba(164,166,164,.5) 0%, rgba(198,194,194,.5) 50%, rgba(164,166,164,.5) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(164,166,164,.5) 0%, rgba(198,194,194,.5) 50%, rgba(164,166,164,.5) 100%);
+    background: linear-gradient(0deg, rgba(164,166,164,.5) 0%, rgba(198,194,194,.5) 50%, rgba(164,166,164,.5) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a4a6a4",endColorstr="#a4a6a4",GradientType=1);
+
+    & > span:nth-child(1) {
+        height: 100%;
+        max-width: 100%;
+        border-radius: 8px;
+
+        background: rgb(54,121,9);
+        background: -moz-linear-gradient(0deg, rgba(54,121,9,1) 0%, rgba(229,255,187,1) 50%, rgba(54,121,9,1) 100%);
+        background: -webkit-linear-gradient(0deg, rgba(54,121,9,1) 0%, rgba(229,255,187,1) 50%, rgba(54,121,9,1) 100%);
+        background: linear-gradient(0deg, rgba(54,121,9,1) 0%, rgba(229,255,187,1) 50%, rgba(54,121,9,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#367909",endColorstr="#367909",GradientType=1);
+    }
+
+    &.loading_bar_right {
+        justify-content: right;
+    }
+    &.loading_bar_center {
+        justify-content: center;
+    }
+    & > span:nth-child(2){
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 14px;
+        width: 100%;
+        font-size: 13px;
+        font-weight: bold;
+    }
+}

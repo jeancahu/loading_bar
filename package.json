@@ -1,0 +1,16 @@
+{
+  "name": "loading_bar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "scss": "sass --watch scss/:css/",
+    "buildscss": "sass scss/:css/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.83.4"
+  }
+}
